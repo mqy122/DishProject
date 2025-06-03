@@ -1,0 +1,17 @@
+C:\Users\Teachers\Desktop\nasko11a\Dishes\bin\Debug\Dishes.exe.config
+C:\Users\Teachers\Desktop\nasko11a\Dishes\bin\Debug\Dishes.exe
+C:\Users\Teachers\Desktop\nasko11a\Dishes\bin\Debug\Dishes.pdb
+C:\Users\Teachers\Desktop\nasko11a\Dishes\bin\Debug\EntityFramework.dll
+C:\Users\Teachers\Desktop\nasko11a\Dishes\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Teachers\Desktop\nasko11a\Dishes\bin\Debug\EntityFramework.xml
+C:\Users\Teachers\Desktop\nasko11a\Dishes\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.csproj.AssemblyReference.cache
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.Form1.resources
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.Properties.Resources.resources
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.csproj.GenerateResource.cache
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.csproj.CoreCompileInputs.cache
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.csproj.Up2Date
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.exe
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.pdb
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.exe.config
+C:\Users\Teachers\Desktop\nasko11a\Dishes\obj\Debug\Dishes.Migrations.DishMigrate.resources

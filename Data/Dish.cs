@@ -12,7 +12,8 @@ namespace Dishes.Data
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        public decimal quantity { get; set; }
-       public int Dishtype { get; set; }
+        public decimal Quantity { get; set; }
+       public int DishtypeID { get; set; }
+        public DishType DishType { get; set; }
     }
 }

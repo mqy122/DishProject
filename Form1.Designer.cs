@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dishbdDataSet = new Dishes.DishbdDataSet();
-            this.dishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dishesTableAdapter = new Dishes.DishbdDataSetTableAdapters.DishesTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dishbdDataSet = new Dishes.DishbdDataSet();
+            this.dishesTableAdapter = new Dishes.DishbdDataSetTableAdapters.DishesTableAdapter();
             this.txt1 = new System.Windows.Forms.TextBox();
             this.txt2 = new System.Windows.Forms.TextBox();
             this.txt3 = new System.Windows.Forms.TextBox();
@@ -53,8 +53,8 @@
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dishbdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dishbdDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -73,20 +73,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dishbdDataSet
-            // 
-            this.dishbdDataSet.DataSetName = "DishbdDataSet";
-            this.dishbdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dishesBindingSource
-            // 
-            this.dishesBindingSource.DataMember = "Dishes";
-            this.dishesBindingSource.DataSource = this.dishbdDataSet;
-            // 
-            // dishesTableAdapter
-            // 
-            this.dishesTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -124,6 +110,20 @@
             this.dishtypeDataGridViewTextBoxColumn.DataPropertyName = "Dishtype";
             this.dishtypeDataGridViewTextBoxColumn.HeaderText = "Dishtype";
             this.dishtypeDataGridViewTextBoxColumn.Name = "dishtypeDataGridViewTextBoxColumn";
+            // 
+            // dishesBindingSource
+            // 
+            this.dishesBindingSource.DataMember = "Dishes";
+            this.dishesBindingSource.DataSource = this.dishbdDataSet;
+            // 
+            // dishbdDataSet
+            // 
+            this.dishbdDataSet.DataSetName = "DishbdDataSet";
+            this.dishbdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dishesTableAdapter
+            // 
+            this.dishesTableAdapter.ClearBeforeFill = true;
             // 
             // txt1
             // 
@@ -169,6 +169,7 @@
             this.btn1.TabIndex = 6;
             this.btn1.Text = "ADD";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn2
             // 
@@ -256,8 +257,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dishbdDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dishbdDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

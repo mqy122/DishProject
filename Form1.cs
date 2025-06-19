@@ -23,5 +23,10 @@ namespace Dishes
             this.dishesTableAdapter.Fill(this.dishbdDataSet.Dishes);
 
         }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

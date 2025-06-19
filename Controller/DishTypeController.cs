@@ -9,18 +9,18 @@ namespace Dishes.Controller
 { }
     public class DishTypeController
     {
-        private DishesContext vegandbcontex = new DishesContext();
-        public List<Dish> GetAllVegans()
+        private DishesContext DishDbContext = new DishesContext();
+        public List<Dish> GetAllDishes()
         {
-            return vegandbcontex.Dishes.ToList();
+            return DishDbContext.Dishes.ToList();
         }
         public string GetDishById(int id)
         {
-            return vegandbcontex.Dishes.Find(id).Name;
+            return DishDbContext.Dishes.Find(id).Name;
         }
-        public List<DishType> GetAllVeganTypes()
+        public List<DishType> GetAllDishTypes()
         {
-            return vegandbcontex.DishTypes.ToList();
+            return DishDbContext.DishTypes.ToList();
 
 
 

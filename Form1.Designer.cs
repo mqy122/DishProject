@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Grid1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,7 @@
             this.txt2 = new System.Windows.Forms.TextBox();
             this.txt3 = new System.Windows.Forms.TextBox();
             this.txt4 = new System.Windows.Forms.TextBox();
-            this.cmb = new System.Windows.Forms.ComboBox();
+            this.cmb1 = new System.Windows.Forms.ComboBox();
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -52,27 +52,29 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt5 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishbdDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // Grid1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Grid1.AutoGenerateColumns = false;
+            this.Grid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
             this.dishtypeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dishesBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(533, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.Grid1.DataSource = this.dishesBindingSource;
+            this.Grid1.Location = new System.Drawing.Point(176, 27);
+            this.Grid1.Name = "Grid1";
+            this.Grid1.Size = new System.Drawing.Size(579, 150);
+            this.Grid1.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -153,23 +155,22 @@
             this.txt4.Size = new System.Drawing.Size(100, 20);
             this.txt4.TabIndex = 4;
             // 
-            // cmb
+            // cmb1
             // 
-            this.cmb.FormattingEnabled = true;
-            this.cmb.Location = new System.Drawing.Point(55, 307);
-            this.cmb.Name = "cmb";
-            this.cmb.Size = new System.Drawing.Size(121, 21);
-            this.cmb.TabIndex = 5;
+            this.cmb1.FormattingEnabled = true;
+            this.cmb1.Location = new System.Drawing.Point(55, 362);
+            this.cmb1.Name = "cmb1";
+            this.cmb1.Size = new System.Drawing.Size(121, 21);
+            this.cmb1.TabIndex = 5;
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(374, 307);
+            this.btn1.Location = new System.Drawing.Point(329, 307);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(75, 23);
             this.btn1.TabIndex = 6;
             this.btn1.Text = "ADD";
             this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn2
             // 
@@ -228,17 +229,35 @@
             // lbl5
             // 
             this.lbl5.AutoSize = true;
-            this.lbl5.Location = new System.Drawing.Point(52, 291);
+            this.lbl5.Location = new System.Drawing.Point(52, 346);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(46, 13);
             this.lbl5.TabIndex = 13;
             this.lbl5.Text = "Quantity";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 294);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "weight";
+            // 
+            // txt5
+            // 
+            this.txt5.Location = new System.Drawing.Point(55, 310);
+            this.txt5.Name = "txt5";
+            this.txt5.Size = new System.Drawing.Size(100, 20);
+            this.txt5.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt5);
             this.Controls.Add(this.lbl5);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.lbl3);
@@ -247,16 +266,15 @@
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
-            this.Controls.Add(this.cmb);
+            this.Controls.Add(this.cmb1);
             this.Controls.Add(this.txt4);
             this.Controls.Add(this.txt3);
             this.Controls.Add(this.txt2);
             this.Controls.Add(this.txt1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Grid1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishbdDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -266,7 +284,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Grid1;
         private DishbdDataSet dishbdDataSet;
         private System.Windows.Forms.BindingSource dishesBindingSource;
         private DishbdDataSetTableAdapters.DishesTableAdapter dishesTableAdapter;
@@ -280,7 +298,7 @@
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.TextBox txt3;
         private System.Windows.Forms.TextBox txt4;
-        private System.Windows.Forms.ComboBox cmb;
+        private System.Windows.Forms.ComboBox cmb1;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn3;
@@ -289,6 +307,8 @@
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label lbl5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt5;
     }
 }
 

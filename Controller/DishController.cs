@@ -7,34 +7,34 @@ namespace Dishes.Controller
 {
     internal class DishController
     {
-        private DishesContext dishesDbContext = new DishesContext();
+        private DishesContext DishDbContext = new DishesContext();
 
       
 
         public Dish Get(int id)
         {
-            var dish = dishesDbContext.Dishes.Find(id);
+            var dish = DishDbContext.Dishes.Find(id);
             if (dish == null)
             {
-                dishesDbContext.Entry(dish).Reference(x => x.DishType).Load();
+                DishDbContext.Entry(dish).Reference(x => x.DishType).Load();
             }
             return dish;
         }
 
         public List<Dish> GetAll()
         {
-            return dishesDbContext.Dishes.Include("Dishes").ToList();
+            return DishDbContext.Dishes.Include("Dishes").ToList();
         }
 
         public void Create(Dish dish)
         {
-            dishesDbContext.Dishes.Add(dish);
-            dishesDbContext.SaveChanges();
+            DishDbContext.Dishes.Add(dish);
+            DishDbContext.SaveChanges();
         }
 
         public void Update(int id, Dish dish)
         {
-            var existingDish = dishesDbContext.Dishes.Find(id);
+            var existingDish = DishDbContext.Dishes.Find(id);
             if (existingDish == null)
             {
                 return;
@@ -43,18 +43,18 @@ namespace Dishes.Controller
             existingDish.Description = dish.Description;
             existingDish.Price = dish.Price;
             
-            dishesDbContext.SaveChanges();
+            DishDbContext.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            var dish = dishesDbContext.Dishes.Find(id);
+            var dish = DishDbContext.Dishes.Find(id);
             if (dish == null)
             {
                 return;
             }
-            dishesDbContext.Dishes.Remove(dish);
-            dishesDbContext.SaveChanges();
+            DishDbContext.Dishes.Remove(dish);
+            DishDbContext.SaveChanges();
         }
     }
 }
